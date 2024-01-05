@@ -99,8 +99,14 @@ class _DetailPageState extends State<DetailPage> {
                                     MainAxisAlignment.spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  const Text('Altura:'),
-                                  Text(widget.pokemon.height)
+                                  const Text('height:',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20)),
+                                  Text(widget.pokemon.height,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))
                                 ],
                               ),
                             ),
@@ -111,15 +117,26 @@ class _DetailPageState extends State<DetailPage> {
                                     MainAxisAlignment.spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  const Text('Peso:'),
-                                  Text(widget.pokemon.weight)
+                                  const Text('weight:',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20)),
+                                  Text(widget.pokemon.weight,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))
                                 ],
                               ),
                             ),
+                            const Padding(
+                                padding: EdgeInsets.only(top: 20, bottom: 8),
+                                child: Text("Weaknesses",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20))),
                             Row(
-                              mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Row(
                                   mainAxisAlignment:
@@ -131,7 +148,6 @@ class _DetailPageState extends State<DetailPage> {
                                           ))
                                       .toList(),
                                 ),
-                                
                               ],
                             )
                           ],

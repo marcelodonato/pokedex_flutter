@@ -9,12 +9,14 @@ class WeaknessesListWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 3),
       child: Container(
-        child: Padding(
-          padding: const EdgeInsets.all(6),
-          child: Text(
-            weaknesses,
-            style: const TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 10),
+        child: Flexible(
+          child: Padding(
+            padding: const EdgeInsets.all(6),
+            child: Text(
+              weaknesses,
+              style: const TextStyle(
+                  color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+            ),
           ),
         ),
       ),
