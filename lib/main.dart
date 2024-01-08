@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pokedex 2K21',
+      title: 'Pokedex_flutter',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),

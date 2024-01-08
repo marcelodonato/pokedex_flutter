@@ -51,18 +51,18 @@ class DetailListWidget extends StatelessWidget {
             SizedBox(
               height: 300,
               width: double.infinity,
-              child: PageView(
-                onPageChanged: (index) => onChangePokemon(list[index]),
+              child: PageView.builder(
                 controller: controller,
-                children: list.map(
-                  (e) {
-                    bool diff = e.name != pokemon.name;
-                    return DetailItemListWidget(
-                      isDiff: diff,
-                      pokemon: e,
-                    );
-                  },
-                ).toList(),
+                onPageChanged: (index) => onChangePokemon(list[index]),
+                itemCount: list.length,
+                itemBuilder: ((context, index) {
+                  Pokemon item = list[index];
+                  bool diff = item.name != pokemon.name;
+                  return DetailItemListWidget(
+                    isDiff: diff,
+                    pokemon: item,
+                  );
+                }),
               ),
             ),
           ],

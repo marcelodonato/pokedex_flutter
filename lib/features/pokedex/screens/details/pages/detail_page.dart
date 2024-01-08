@@ -3,7 +3,6 @@ import 'package:pokedex_flutter/common/models/pokemon.dart';
 import 'package:pokedex_flutter/features/pokedex/screens/details/widgets/detail_app_bar_widget.dart';
 import 'package:pokedex_flutter/features/pokedex/screens/details/widgets/detail_list_widget.dart';
 import 'package:pokedex_flutter/features/pokedex/screens/details/widgets/weaknesses_list_widget.dart';
-import 'package:pokedex_flutter/features/pokedex/screens/home/pages/widgets/type_widget.dart';
 
 class DetailPage extends StatefulWidget {
   DetailPage({

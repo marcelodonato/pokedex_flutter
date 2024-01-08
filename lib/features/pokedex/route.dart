@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_flutter/common/models/repositories/pokemon_repository.dart';
 import 'package:pokedex_flutter/features/pokedex/screens/details/container/detail_container.dart';
-import 'package:pokedex_flutter/features/pokedex/screens/home/container/home_container.dart';
+import 'package:pokedex_flutter/features/pokedex/screens/home/pages/new_home_page.dart';
 
 class PokedexRoute extends StatelessWidget {
   const PokedexRoute({Key? key, required this.repository}) : super(key: key);
@@ -14,12 +14,7 @@ class PokedexRoute extends StatelessWidget {
         if (settings.name == '/') {
           return MaterialPageRoute(
             builder: (context) {
-              return HomeContainer(
-                repository: repository,
-                onItemTap: (route, arguments) {
-                  Navigator.of(context).pushNamed(route, arguments: arguments);
-                },
-              );
+              return NewHomePage();
             },
           );
         }
